@@ -1,0 +1,20 @@
+-mongodb have databases, collections, document 
++db.collection("name of collection") :cho biết collection chúng ta muốn làm việc vs, nếu không có thì sẽ được tạo trong lần đầu tiên truy cập
+
+
+-Chỉ cần kết nổi một lần( ở top của app), kết nối nhiều lần nhiều nơi có thể dẫn đến không thể huỷ kết nối
+
+-sql thì phải tạo bảng trước còn nosql sẽ tự tạo database trong lần kết nối đầu tiên (k dùng mongoose hay sequelize)
+
+-express js không tự động trả default response, nếu k trả sẽ bị spin hoài
+
+-app.use(middleware) cho cả get và post.... (nếu muốn riêng thì app.get() v.v)
+
+- ví du app.use("/admin", adminRoutes) là bắt đầu bằng admin chứ k phải full path , (path sẽ set từ top to bottom và từ ngoài vào trong và chỉ match một path duy nhất nêu k gọi next())
+- còn app.get("/admin", adminRoutes) là route tuyệt đối
+
+-Trả về >=2 response bị error
+
+-app.use(bodyParser.urlencoded({ extended: false })) lấy data từ html(value có thể là array hoặc string nếu extended: false và các loại còn lại nếu extended: true.) nó đơn giản là middleware
+
+-config static file đơn giản là cấu hình cho nó k phải là route mà là truy cập trực tiếp vào file 
